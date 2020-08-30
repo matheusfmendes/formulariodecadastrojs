@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrudJS</title>
+</head>
+<body>
+<form action="POST" action="index.html" onsubmit="return enviarDados();">
+        <table>
+            <td>Nome: </td>
+            <td><input type="text" name="nome" id="nome"></td>
+
+            <td>E-mail: </td>
+            <td><input type="text" name="email" id="email"></td>
+
+            <td>Senha: </td>
+            <td><input type="password" name="senha" id="senha"></td>
+
+            <td><input type="submit" value="Enviar"></td>
+        </table>
+    </form>
+
+    <script>
+        function enviarDados(){
+        var nome = document.getElementById("nome").value;
+        var email = document.getElementById("email").value;
+        var senha = document.getElementById("senha").value;
+
+
+        if(nome.length <= 6 || nome.length > 30)
+        alert('Tamanho do nome invalido');
+        else{
+            if(email.length <= 7)
+            alert('email invalido');
+        if(senha.length <= 6)
+        alert('Senha curta de mais');
+        else{
+            alert('Cadastro realizado com sucesso!')
+        }
+        }
+
+
+        }
+
+    </script>
+
+
+
+</body>
+</html>
